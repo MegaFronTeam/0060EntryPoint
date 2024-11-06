@@ -16,6 +16,7 @@
 	--swiperBorderColorDefHover: var(--bs-primary);
 	--swiperColorDefHover: var(--bs-primary);
 	--swiperBgDefHover: #ffffff;
+  --dark-card-bg: $gray-950;
 
 	//  --carousel-button-width: 48px;
 	//  --carousel-button-height: 48px;
@@ -28,8 +29,8 @@
 
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+		--sPB: #{rem(80)};
+		--sTPB: #{rem(68)};
 	}
 }
 .fancybox__container {

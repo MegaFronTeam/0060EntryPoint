@@ -1,0 +1,18 @@
+mixin sSuccess(data)
+	// start sSuccess
+	+b.SECTION.sSuccess.section#sSuccess&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h4 Примеры моих сделок. Листай, пока рука не отсохнет
+				p Заполните паузу, полистайте сделки из моего Телеграм-канала. Все эти акции я выкладывал публично:
+			+e.item
+				+reviewItem('review-4')
+				+reviewItem('review-3')
+				+reviewItem('review-2')
+				+reviewItem('review-1')
+			.text-center: +btnBase('Хочу зарабатывать в трейдинге каждый день')
+	// end sSuccess
+
+mixin reviewItem(img)
+	+b.review-item(data-fancybox='review' data-src=`img/${img}.png`): +img(`img/${img}.png`)
+	// end sSuccess

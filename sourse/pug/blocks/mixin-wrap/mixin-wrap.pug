@@ -44,3 +44,17 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+
+mixin btnBase(text)
+	.btn.btn-primary.btn-base.link-modal-js&attributes(attributes)(href='#modal-call')!= text
+		+icon('btn-arrow')
+
+
+mixin defSlider()
+	+b.def-slider.def-swiper-js
+		.swiper
+			.swiper-wrapper
+				block
+		+arrow()
+		.swiper-pagination

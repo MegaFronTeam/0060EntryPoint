@@ -43,6 +43,24 @@ function eventHandler() {
 		},
 	};
 
+  let defSwipers = document.querySelectorAll(".def-swiper-js");
+	for (const defSwiper of defSwipers) {
+		new Swiper(defSwiper.querySelector(".swiper"), {
+			slidesPerView: "auto",
+			// loop: true,
+			// autoHeight: true,
+			// pagination: {
+			// 	el: defSwiper.querySelector(".swiper-pagination"),
+			// 	type: "bullets",
+			// 	clickable: true,
+			// },
+			navigation: {
+				nextEl: defSwiper.querySelector(".swiper-button-next"),
+				prevEl: defSwiper.querySelector(".swiper-button-prev"),
+			},
+		});
+	}
+
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,

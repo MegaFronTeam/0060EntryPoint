@@ -111,3 +111,124 @@
 	width: auto;
 	// margin-right: rem(32);
 }
+
+
+.btn-base {
+	--bs-btn-padding-x: #{rem(16)};
+	// --bs-btn-padding-y: #{rem(16)};
+  padding-top: rem(16);
+  padding-bottom: rem(14);
+	--bs-btn-font-size: #{rem(14)};
+	--bs-btn-font-weight: 600;
+	--bs-btn-line-height: 1;
+	--bs-btn-border-radius: #{rem(16)};
+
+	--bs-btn-color: #{$body-color};
+  background: linear-gradient(180deg, #e90b0b 0%, #930f0f 100%);
+	// --bs-btn-bg: #{linear-gradient(180deg, #e90b0b 0%, #930f0f 100%)};
+	--bs-btn-border-color: #{$red};
+
+	--bs-btn-hover-color: #{$body-color};
+	// --bs-btn-hover-bg: #06d5a8;
+	// --bs-btn-hover-border-color: #06d5a8;
+
+	// --bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #{$red};
+	--bs-btn-active-border-color: #{$red};
+
+	// --bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #{$red};
+	--bs-btn-disabled-border-color: #{$red};
+  box-shadow: 0 18px 22px 0 rgba(214, 30, 30, 0.25) !important;
+	display: inline-block;
+
+	@include media-breakpoint-up(sm) {
+		--bs-btn-padding-x: #{rem(23)};
+		--bs-btn-font-size: 1.25rem;
+	}
+	&:hover {
+		box-shadow: none !important;
+	}
+
+  .icon {
+    margin-left: rem(20);
+  }
+}
+
+
+.def-slider {
+	position: relative;
+	h6 {
+		text-align: center;
+		line-height: 1.2;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+	}
+  .swiper {
+		@include media-breakpoint-up(lg) {
+      max-width: rem(709);
+    }
+  }
+  .swiper-button-hand {
+    --swiperArrowPosition: 20px;
+		@include media-breakpoint-up(lg) {
+      --swiperArrowPosition: 16%;
+    }
+  }
+  .swiper-slide img {
+    border-radius: $border-radius-sm;
+    // overflow: hidden;
+  }
+
+	&__slide {
+		text-align: center;
+		cursor: pointer;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+
+.swiper-button-hand {
+  --swiperBgDef: #{$pink};
+  --swiperColorDef: #{$body-color};
+  --swiperArrowSize: 40px;
+  --swiperBorderColorDef: #{$pink};
+
+  --swiperBgDefHover: #{$red};
+  --swiperBorderColorDefHover: #{$red};
+  // --swiperColorDefHover;
+  z-index: 50;
+  // border: 2px solid var(--swiperBorderColorDef);
+  border-radius: rem(16);
+  &:hover {
+    
+    // --swiperBorderColorDef: #{$pink};
+    // --swiperBgDef: #{$pink};
+    // --swiperColorDef: #{$body-color};
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    fill: none;
+    stroke-width: 3px;
+    stroke: $body-color;
+    font-size: rem(24);
+  }
+}
+
+.swiper-button-disabled {
+  --swiperBgDef: #{$gray-200};
+  --swiperBorderColorDef: #{$gray-200};
+
+  .icon {
+    stroke: $pink;
+  }
+}
