@@ -6,6 +6,13 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sSlider/_sSlider.pug
  
+include ../blocks/sEntry/_sEntry.pug
+include ../blocks/sAuthor/_sAuthor.pug
+include ../blocks/sWhyUSA/_sWhyUSA.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sStudy/_sStudy.pug
+include ../blocks/sYouCan/_sYouCan.pug
+include ../blocks/sAdvs/_sAdvs.pug
 include ../blocks/sSuccess/_sSuccess.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sQA/_sQA.pug
@@ -26,9 +33,27 @@ block pagecontent
 	+parts('header')
 	main
 		//- +headerBlock 
+		+sEntry
+		+sWhyUSA
+		+sAuthor
+		+sSlider('Мои ученики выбрали воспользоваться уже пройденным мною опытом.', 'Сказать, что они очень довольны – мало. Вот что они пишут:').mb-xl
+			+defSlider
+				- for (var i = 1; i <= 15; i++)
+					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
+		+sSlider('Но ни один отзыв не сможет сравниться с эмоциями от полученных результатов.', 'Вот их сделки:').mb-xl
+			+defSlider
+				- for (var i = 1; i <= 25; i++)
+					+e.slide.swiper-slide(data-fancybox='modal-slider-study' data-src=`img/study-${i}.png`): +img(`img/study-${i}.png`).res-i
+		+sVideo
+		+sStudy
+		+sYouCan
+		+sAdvs
 		+sApply
 		+sQA
 		+sLastChance
 		+sSlider('P.S. Все еще откладываете решение?', 'Заполните паузу, полистайте сделки из моего Телеграм-канала. Все эти акции я выкладывал публично:')
+			+defSlider
+				- for (var i = 1; i <= 15; i++)
+					+e.slide.swiper-slide(data-fancybox='modal-slider-bottom' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
 		+sSuccess
 	+footer

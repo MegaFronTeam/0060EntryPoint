@@ -1,0 +1,34 @@
+mixin sAdvs(data)
+	// start sAdvs
+	+b.SECTION.sAdvs.section#sAdvs&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Ваши преимущества с&nbsp;&laquo;Точкой входа&raquo;
+				h4 Они все на Вашей стороне:
+			+e.row.row
+				- const wrapClass="col-md-6 col-lg-4 col-xl-3"
+				+e.col(class= wrapClass)
+					+advCardIcon('capa','Торговля только внутри дня', 'Никаких ночных волнений и неожиданных потерь.')
+				+e.col(class= wrapClass)
+					+advCardIcon('grow','Высокая доходность позволяет торговать не каждый день', 'а 2-3 раза в неделю')
+				+e.col(class= wrapClass)
+					+advCardIcon('ok','Простота и ясность', 'Понятные правила отбора акций, входа и выхода из сделки')
+				+e.col(class= wrapClass)
+					+advCardIcon('star','Авторская рабочая система', 'Аналогов которой нет ни в Интернете, ни в книгах по трейдингу.')
+				+e.col(class= wrapClass)
+					+advCardIcon('rapid','Быстрая отдача', 'Начните зарабатывать уже во время обучения')
+				+e.col(class= wrapClass)
+					+advCardIcon('info','Минимум информации для запоминания', 'Никаких сложных паттернов, формул и индикаторов.')
+				+e.col(class= wrapClass)
+					+advCardIcon('market','Работает в любых условиях рынка', 'Кризисы и падения не помеха для заработка')
+				+e.col.col-lg-8.order-md-5(class= wrapClass)
+					.text-wrap 
+						.h4 Остался всего один шаг. Действуйте!
+						+img('img/svg/arrow-action.svg').img
+	// end sAdvs
+
+mixin advCardIcon(i, title, text)
+	+b.adv-card-icon
+		+icon(`${i}`)
+		+e.title= title 
+		+e.text= text
