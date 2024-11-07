@@ -243,6 +243,6 @@
   --swiperBorderColorDef: #{$gray-200};
 
   .icon {
-    stroke: $pink;
+    stroke: var(--accent-color);
   }
 }

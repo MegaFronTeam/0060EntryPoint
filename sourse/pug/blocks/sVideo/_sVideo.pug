@@ -6,7 +6,9 @@ mixin sVideo(data)
 				h4 Про «Точку входа» устами учеников:
 			+e.row.row
 				+e.col.col-lg-6
-					<iframe src="https://kinescope.io/e2XNJwJpavG2tdvfcveMaD" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+					iframe( src="https://kinescope.io/e2XNJwJpavG2tdvfcveMaD", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen, loading='lazy')
+				+e.col.col-lg-6
+					iframe( src="https://kinescope.io/2CoZJRViBWw4zcEafmSN9V", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen, loading='lazy')
 
 			.text-center: +btnBase('Присоединиться к команде успешных учеников')
 	// end sVideo

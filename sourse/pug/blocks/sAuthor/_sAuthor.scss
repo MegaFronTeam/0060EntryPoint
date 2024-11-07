@@ -131,7 +131,7 @@
   }
 
   &__accent-wrap {
-    color: $pink;
+    color: var(--accent-color);
     font-style: italic;
     @include media-breakpoint-up(xl) {
       margin-left: rem(36);

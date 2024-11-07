@@ -43,14 +43,6 @@
       }
     }
 
-
-    .icon {
-      fill: none;
-      stroke-width: 2px;
-      stroke: #423C43;
-      margin-right: rem(8);
-      transform: translateY(-2px);
-    }
 	}
 
   .h5 {
@@ -67,7 +59,7 @@
     }
   }
   .h4 span {
-    color: $pink;
+    color: var(--accent-color);
   }
 
   &__content {
@@ -170,3 +162,12 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sStudy
+
+
+.icon-calendar {
+  fill: none;
+  stroke-width: 2px;
+  stroke: #423C43;
+  margin-right: rem(8);
+  transform: translateY(-2px);
+}

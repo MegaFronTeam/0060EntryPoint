@@ -15,8 +15,25 @@
 	.res-i {
     max-height: rem(553);
   }
-  &.mb-xl {
+  .swiper-slide.small .res-i {
+    max-height: rem(500);
+  }
+
+  &__item {
     margin-bottom: rem(64);
+  }
+
+  .item-bottom {
+    max-width: rem(1055);
+    margin: auto;
+    margin-bottom: rem(80);
+    h4 {
+      margin-bottom: rem(16);
+      line-height: 1;
+    }
+    p {
+      margin-bottom: rem(40);
+    }
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -27,3 +44,8 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sSlider
+
+
+.mb-xl {
+  margin-bottom: rem(64);
+}

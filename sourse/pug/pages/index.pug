@@ -6,6 +6,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sSlider/_sSlider.pug
  
+include ../blocks/sResults/_sResults.pug
 include ../blocks/sEntry/_sEntry.pug
 include ../blocks/sAuthor/_sAuthor.pug
 include ../blocks/sWhyUSA/_sWhyUSA.pug
@@ -33,6 +34,8 @@ block pagecontent
 	+parts('header')
 	main
 		//- +headerBlock 
+		+sResults
+		+sSlider2('Вот скриншоты моих еженедельных отчетов из Телеграм-канала:')
 		+sEntry
 		+sWhyUSA
 		+sAuthor

@@ -47,6 +47,7 @@ function eventHandler() {
 	for (const defSwiper of defSwipers) {
 		new Swiper(defSwiper.querySelector(".swiper"), {
 			slidesPerView: "auto",
+      spaceBetween: 10,
 			// loop: true,
 			// autoHeight: true,
 			// pagination: {
@@ -61,7 +62,7 @@ function eventHandler() {
 		});
 	}
 
-	new Swiper(".breadcrumb-slider--js", {
+	new Swiper(".sResults__slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,

@@ -2,9 +2,25 @@ mixin sSlider(title, text)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
 		.container
-			.section-wrap
-				.section-title.text-center
-					h4=title
-					p=text
-				if block
-					block
+			.section-title.text-center
+				h4=title
+				p=text
+			if block
+				block
+
+mixin sSlider2(title, text)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+e.item.text-center
+				h4=title
+			+e.item: +defSlider
+				- for (var i = 1; i <= 37; i++)
+					+e.slide.swiper-slide.small(data-fancybox='modal-slider-sl-report' data-src=`img/sl-report-${i}.png`): +img(`img/sl-report-${i}.png`).res-i
+			+e.item.text-center
+				+e.btn.btn.btn-base.btn-outline-light(href='https://t.me/+gQeLE5XAWRsxZjNi') Смотреть свежие отчеты в Телеграм-канале
+					+icon('btn-arrow')
+			+e.item.item-bottom.text-center
+				h4 В сделку я вхожу всем депозитом, но без плеча. Если акций в работе две, делю депозит между ними.
+				p Когда Вы видите прибыль в сделке – это процент прироста к депозиту.
+				+btnBase('Хочу получать такие же результаты!')

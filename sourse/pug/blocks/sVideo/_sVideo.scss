@@ -5,11 +5,13 @@
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
     --sPB: #{rem(40)};
+    --sTPB: #{rem(32)};
     }
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: #{rem(32)};
+    margin-bottom: rem(64);
 	}
 	.section-title{
 		
@@ -20,6 +22,10 @@
 	&__item{
 		
 	}
+  iframe {
+    width: 100%;
+    @include block(96/171);
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

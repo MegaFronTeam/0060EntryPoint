@@ -76,7 +76,7 @@
   border-radius: $border-radius;
 
   .icon {
-    fill: $pink;
+    fill: var(--accent-color);
   }
 
   &__title {
