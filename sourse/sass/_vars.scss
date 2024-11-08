@@ -955,9 +955,9 @@ $form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
-$form-check-input-checked-bg-color:       $component-active-bg !default;
+$form-check-input-checked-bg-color:       $primary;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.000244141' width='24' height='24' rx='4' fill='%23E44646' /%3E%3Cpath d='M9.68493 17.2002C9.44493 17.2002 9.22491 17.1202 9.04491 16.9402L5.06493 12.9602C4.70493 12.6002 4.70493 12.0402 5.06493 11.6802C5.42493 11.3202 5.98491 11.3202 6.34491 11.6802L9.70492 15.0202L17.6849 7.06022C18.0449 6.70022 18.6049 6.70022 18.9649 7.06022C19.3249 7.42022 19.3249 7.98022 18.9649 8.34022L10.3449 16.9402C10.1449 17.1202 9.92493 17.2002 9.68493 17.2002Z' fill='white' /%3E%3C/svg%3E");
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $component-active-color !default;
