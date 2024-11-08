@@ -122,6 +122,7 @@
 	--bs-btn-font-weight: 600;
 	--bs-btn-line-height: 1;
 	--bs-btn-border-radius: #{rem(16)};
+  
 
   &.btn-primary {
     --bs-btn-color: #{$body-color};
@@ -131,7 +132,7 @@
   
     --bs-btn-hover-color: #{$body-color};
     // --bs-btn-hover-bg: #06d5a8;
-    // --bs-btn-hover-border-color: #06d5a8;
+    --bs-btn-hover-border-color: #930f0f;
   
     // --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #{$red};
@@ -149,8 +150,11 @@
   }
 
 
-	display: inline-block;
+	// display: inline-block;
 
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
 	@include media-breakpoint-up(sm) {
 		--bs-btn-padding-x: #{rem(23)};
 		--bs-btn-font-size: 1.25rem;
@@ -159,12 +163,13 @@
 		box-shadow: none !important;
 	}
 
-  .icon {
+  .icon, svg {
     margin-left: rem(20);
-    
+    flex-shrink: 0;
     @include media-breakpoint-down(md) {
       font-size: rem(16);
       margin-left: rem(12);
+      height: rem(20);
     }
   }
 }

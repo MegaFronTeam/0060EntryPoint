@@ -67,6 +67,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(49 / #{$h} *1em );
 }
+.icon-money {
+	$h: 38;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(38 / #{$h} *1em );
+}
 .icon-ok {
 	$h: 48;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -82,10 +87,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(48 / #{$h} *1em );
 }
+.icon-rocket {
+	$h: 38;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(38 / #{$h} *1em );
+}
 .icon-star {
 	$h: 48;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(48 / #{$h} *1em );
+}
+.icon-target {
+	$h: 38;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(38 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;

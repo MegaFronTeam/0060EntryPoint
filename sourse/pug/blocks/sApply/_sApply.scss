@@ -64,8 +64,6 @@
   .btn {
     height: calc(100% - 8px);
   }
-
-
   counter-reset: new-counter;
 
 	@include media-breakpoint-up(xl) {}
@@ -77,7 +75,7 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sApply
 
-.step-card {
+.step-card-apply {
   counter-increment: new-counter;
   position: relative;
   &:before {

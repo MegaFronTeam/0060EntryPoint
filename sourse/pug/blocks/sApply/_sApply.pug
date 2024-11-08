@@ -6,6 +6,11 @@ mixin sApply(data)
 				+b.section-title.text-center
 					h3 Получите доступ в Практикум прямо сейчас
 					h5 Освойте быстрые деньги на волатильных акциях США
+				mixin stepCard(text)
+					+e.col.col-sm-6.col-lg
+						+b.step-card-apply
+							p= text
+							+img(`img/svg/arrow-bl.svg`).arrow
 				+e.row.row
 					+stepCard('Введите Ваши данные и нажмите кнопку «Продолжить».')
 					+stepCard('Вам откроется страница с описанием версий участия')
@@ -90,9 +95,3 @@ mixin sApply(data)
 							});
 						}, 0);
 	// end sApply
-
-mixin stepCard(text)
-	+e.col.col-sm-6.col-lg
-		+b.step-card
-			p= text
-			+img(`img/svg/arrow-bl.svg`).arrow

@@ -30,3 +30,37 @@ mixin sEntry(data)
 						p Средняя длительность сделки
 						.h4 10-15 минут.
 	// end sEntry
+
+
+mixin sEntry2(data)
+	// start sEntry
+	+b.SECTION.sEntry.section.mt-0&attributes(attributes)
+		.container
+			.section-wrap.section-wrap_dark
+				+img('img/svg/entry-bg.svg').entry-bg.entry-bg_right
+				+img('img/bull.png').bull.img-bg
+				+e.content
+					+e.wrap.title
+						p Приглашаю Вас на онлайн-практикум
+						h2 #[span Точка входа]
+						.h4 Как находить акцию-сенсацию каждый день?
+					+e.wrap: ul.point 
+						li Старт с нуля для новичков
+						li Простая пошаговая торговая система.
+						li Доступно для граждан РФ и граждан других стран.
+						li Понятное и удобное обучение в Инфоклубе.
+						li Авторский алгоритм поиска точки входа непосредственно перед сильным движением.
+						li Проверено ежедневной торговлей с 2020 года и подтверждено публичными результатами.
+					+e.wrap
+						p Получите ключ к быстрым деньгам в трейдинге
+					+e.wrap
+						.btn.btn-light.scroll-link.btn-base(href='#form-link') Получить торговую систему сейчас
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7096 1.15299L31.113 15.5563L16.7096 29.9597L13.4485 26.6986L22.2847 17.8623L2.30626 17.8623L2.30626 13.2504H22.2847L13.4485 4.41413L16.7096 1.15299Z" fill="url(#paint0_linear_8012_1334)" />
+								<defs>
+									<linearGradient id="paint0_linear_8012_1334" x1="23.3348" y1="7.77817" x2="7.77847" y2="23.3345" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#E90B0B" />
+										<stop offset="1" stop-color="#930F0F" />
+									</linearGradient>
+								</defs>
+							</svg>

@@ -1,0 +1,99 @@
+// start .sHowWorks
+.sHowWorks {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+  @include media-breakpoint-up(lg) {
+    --sPT: #{rem(30)};
+    --sTPB: #{rem(54)};
+    --sPB: #{rem(60)};
+  }
+
+	&__row {
+    --pad-top: 40px;
+    padding: var(--pad-top) 0;
+    padding-left: rem(40);
+    border-top: 1px solid #313030;
+
+		display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: .6fr .4fr;
+      padding-left: rem(80);
+      gap: 0 rem(30);
+    }
+
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      left: rem(10);
+      z-index: 0;
+      @include media-breakpoint-up(sm) {
+        left: 0;
+      }
+    }
+
+    &:before {
+      background: $primary;
+      height: calc(100% - var(--pad-top)*2);
+      position: absolute;
+      bottom: var(--pad-top);
+      width: 1px;
+      transform: translateX(-50%);
+    }
+    &:after {
+      content: url(../img/svg/arr-down.svg);
+      width: 8px;
+      height: 4px;
+      position: absolute;
+      bottom: calc(var(--pad-top) + 8px);
+      transform: translate(-50%, -50%);
+    }
+
+	}
+
+  &__cards-row {
+    --bs-gutter-x: #{rem(32)};
+    --bs-gutter-y: #{rem(20)};
+    margin-top: rem(44);
+  }
+  span {
+    font-weight: 700;
+  }
+
+	&__item {
+		p:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    .title {
+      margin-bottom: rem(24);
+      line-height: 90%;
+    }
+    .h4 {
+      margin-bottom: 0;
+    }
+	}
+	
+  .sAuthor__accent-wrap {
+    @include media-breakpoint-up(xl) {
+      margin-left: rem(60);
+    }
+  }
+  p {
+    margin-bottom: rem(20);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sHowWorks

@@ -3,7 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	
+	&.mt-0 {
+    padding-top: 0;
+  }
 
 	.entry-bg {
     position: absolute;
@@ -11,6 +13,26 @@
     left: 0;
     max-width: 100%;
     border-radius: inherit;
+
+    &_right {
+      transform: rotate(-50deg);
+      top: 23%;
+      left: 64%;
+      z-index: 1;
+    }
+  }
+
+  .bull {
+    z-index: 0;
+    object-position: left;
+    @include media-breakpoint-up(lg) {
+      object-position: right;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
   }
 
   .section-wrap {
@@ -21,6 +43,25 @@
     }
     background: linear-gradient(135deg, #DF3434 0%, #6c0000 100%);
     border-radius: rem(20);
+
+    &_dark {
+      overflow: hidden;
+      background: linear-gradient(135deg, #831415 0%, #6c0000 100%);
+      @include media-breakpoint-up(md) {
+        border-radius: 40px;
+      }
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(309deg, rgba(0, 0, 0, 0) 32.04%, #831414 70%, #831414 100%);
+      }
+    }
   }
 
   h2 span {
@@ -44,7 +85,6 @@
       h2, h4 {
         line-height: 1;
       }
-      
     }
   }
 
@@ -121,6 +161,59 @@
       font-size: rem(20);
       opacity: 0.7;
 		}
+  }
+
+  li {
+    margin-bottom: rem(16);
+    background-image: url(../img/svg/point-light.svg) !important;
+  }
+
+
+  &__wrap {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+
+    h2  {
+      span {
+        line-height: 92%;
+      }
+      margin-top: rem(19);
+    }
+
+    li, p {
+      @include media-breakpoint-up(lg) {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  .btn-base.btn-light {
+    text-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25);
+
+    background: none;
+    color: transparent;
+    background: linear-gradient(180deg, #e90b0b 0%, #930f0f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    // display: inline-block;
+    position: relative;
+    &:before {
+      content: '';
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      background: #EDEDED;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      border-radius: inherit;
+      z-index: -1;
+      @include mt;
+    }
+
+    &:hover:before {
+      background: #e0e0e0;
+    }
   }
 
 	@include media-breakpoint-up(xl) {}

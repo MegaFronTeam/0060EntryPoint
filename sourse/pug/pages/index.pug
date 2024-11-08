@@ -6,6 +6,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sSlider/_sSlider.pug
  
+include ../blocks/sHowWorks/_sHowWorks.pug
 include ../blocks/sResults/_sResults.pug
 include ../blocks/sEntry/_sEntry.pug
 include ../blocks/sAuthor/_sAuthor.pug
@@ -33,7 +34,18 @@ block pagecontent
 	
 	+parts('header')
 	main
-		//- +headerBlock 
+		+headerBlock 
+		+sContent
+		+sEntry2
+		+sHowWorks
+		+sSlider('Иногда акции удивляют безбашенным ростом в первые же минуты.', 'Получается забрать вот такую прибыль к депозиту в одной сделке:').mb-xl
+			+e.item: +defSlider
+				- for (var i = 1; i <= 11; i++)
+					+e.slide.swiper-slide(data-fancybox='modal-slider-earn' data-src=`img/sl-earn-${i}.png`): +img(`img/sl-earn-${i}.png`).res-i
+			+e.item.item-bottom.text-center
+				h4 Подтверждено публичной статистикой:
+				p В среднем 15 дней в месяц акции дают возможность совершить сделку.<br>Забрать от 5% прибыли в каждый из этих дней – легко!
+				+btnBase('Хочу зарабатывать прибыль от 5% за день')
 		+sResults
 		+sSlider2('Вот скриншоты моих еженедельных отчетов из Телеграм-канала:')
 		+sEntry

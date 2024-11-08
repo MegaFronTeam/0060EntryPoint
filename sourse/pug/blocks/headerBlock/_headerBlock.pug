@@ -2,10 +2,26 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.row.row
+				+e.col.col-lg-7
+					+e.item: +b.section-title
+						.h2 #[span Точка входа]
+						.h3 Как за 3 шага делать от 5% в день в трейдинге?
+					+e.item.grid
+						+b.adv-card-icon
+							+icon(`rocket`)
+							.small Находите ежедневно акции, которые выстрелят<br> СЕГОДНЯ
+						+b.adv-card-icon
+							+icon(`target`)
+							.small Дождитесь<br> идеальной точки<br> входа
+						+b.adv-card-icon
+							+icon(`money`)
+							.small Заберите прибыль в ближайшие <br>10 минут
+					+e.item: +btnBase('Получить торговую систему сейчас')
+				+e.col.col-lg-5
+					+img('img/sHeaderBlock-img-2.png').author
+					+img('img/svg/circle.svg').decor.decor-circle
+					+img('img/svg/decor-2.svg').decor.decor-bottom
+					+img('img/svg/decor-with-black.svg').decor.decor-top
 	// end headerBlock
+

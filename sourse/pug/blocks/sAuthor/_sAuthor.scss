@@ -103,7 +103,6 @@
     }
 
     li {
-      background-position-y: center;
       @include media-breakpoint-up(lg) {
         background-size: rem(29px);
         padding-left: rem(40);

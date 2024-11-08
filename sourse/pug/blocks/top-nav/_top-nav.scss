@@ -6,21 +6,22 @@
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
 			--bs-gutter-y: var(--bs-gutter-x);
+      align-items: center;
+      position: absolute;
+      top: rem(27);
+      @include media-breakpoint-up(md) {
+        top: rem(47);
+      }
+      left: calc(var(--bs-gutter-x) / 2);
 		// }
 
 	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
-	}
+  .container {
+    position: relative;
+    width: 100%;
+  }
+	
+  // padding-top: rem(47);
 
 
 	@include media-breakpoint-up(sm) {}

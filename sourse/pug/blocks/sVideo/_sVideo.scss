@@ -24,7 +24,7 @@
 	}
   iframe {
     width: 100%;
-    @include block(96/171);
+    @include block(96,171);
   }
 
 	@include media-breakpoint-up(xl) {}
